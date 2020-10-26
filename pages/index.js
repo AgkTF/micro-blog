@@ -1,70 +1,47 @@
 import Head from 'next/head';
+import Navbar from '../components/Navbar/Navbar';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>
+    <div className="mx-auto font-work">
       <Head>
-        <title>Create Next App</title>
+        <title>Learning tidbits | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header>
+        <Navbar />
+      </header>
 
-      <main className="text-4xl font-bold font-work">
-        <h1>
-          Welcome to{' '}
-          <a
-            href="https://nextjs.org"
-            className="text-blue-500 hover:text-blue-400 hover:underline"
-          >
-            Next.js!
-          </a>
+      <section className="flex flex-col justify-center items-center text-center">
+        <h1 className="font-bold text-3xl sm:text-4xl">
+          Welcome <span className="text-2xl sm:text-3xl">🖐</span>
         </h1>
-
-        {/* <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+        <p className="text-xs xs:text-sm">
+          Learning goes on, one tip at a time
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <div className="mt-4 flex gap-3">
+          <Link href="/javascript">
+            <button className="cat-btn js-btn hover:bg-js">javascript</button>
+          </Link>
+          <Link href="/css">
+            <button className="cat-btn css-btn hover:bg-css">css</button>
+          </Link>
+          <Link href="/html">
+            <button className="cat-btn html-btn hover:bg-html">html</button>
+          </Link>
+          <Link href="/git">
+            <button className="cat-btn git-btn hover:bg-git">git</button>
+          </Link>
+        </div>
+      </section>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div> */}
+      <main className="mt-8 flex flex-col justify-center items-center">
+        <h2 className="font-semibold text-2xl xs:text-3xl md:text-4xl">
+          Latest Entries
+        </h2>
       </main>
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer> */}
     </div>
   );
 }
