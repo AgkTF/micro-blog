@@ -1,17 +1,34 @@
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
 const Card = ({ date, content, tag }) => {
+  const renderers = {
+    code: ({ language, value }) => {
+      return (
+        <SyntaxHighlighter
+          style={solarizedlight}
+          language={language}
+          children={value}
+        />
+      );
+    },
+  };
+
+  const markdown =
+    '[`Element.getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) methods returns the size of the element and its position relative to the viewport.';
+
   return (
     <div
-      className={`p-2 w-72 xs:w-88 border border-l-4 border-${tag} flex flex-col shadow`}
+      className={`p-2 w-3/4 sm:w-4/6 md:w-88 border border-l-4 border-${tag} flex flex-col shadow hover:shadow-css`}
     >
       <div className={`self-end font-medium text-xs text-${tag}`}>
         <span>12 Oct, 2020</span>
       </div>
 
-      <p className="mt-2 text-sm">
-        <em>even</em> and <em>odd</em> are keywords that can be used with{' '}
-        <span className="font-mono text-pink-700">nth-child(n)</span> to match
-        elements with odd or even indexes. The first element has index of 1.
-      </p>
+      <div className="mt-2 text-sm">
+        <ReactMarkdown renderers={renderers} children={markdown} />
+      </div>
 
       <div className="mt-4 flex justify-between items-center">
         <div

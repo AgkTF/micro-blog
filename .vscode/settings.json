@@ -16,5 +16,9 @@
     "titleBar.inactiveForeground": "#15202b99"
   },
   "peacock.color": "#D8779A",
-  "cSpell.words": ["flexbox", "flexbugs"]
+  "cSpell.words": [
+    "flexbox",
+    "flexbugs",
+    "ghcolors"
+  ]
 }
