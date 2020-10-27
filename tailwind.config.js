@@ -16,6 +16,7 @@ module.exports = {
       spacing: {
         72: '18rem',
         80: '20rem',
+        88: '22rem',
       },
       fontFamily: {
         work: 'Work Sans',
@@ -24,6 +25,7 @@ module.exports = {
         tiny: '0.625rem',
       },
       colors: {
+        text: '#2B2C34',
         css: {
           default: '#3da9fc',
           light: '#CEE9FE',
@@ -42,8 +44,19 @@ module.exports = {
         },
         offWhite: '#FFFFFE',
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
     },
   },
-  variants: {},
+  variants: {
+    boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+  },
   plugins: [],
 };

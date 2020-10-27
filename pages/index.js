@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
 import Link from 'next/link';
+import Card from '../components/Card/Card';
 
 export default function Home() {
   return (
-    <div className="mx-auto font-work">
+    <div className="mx-auto font-work text-text">
       <Head>
         <title>Learning tidbits | Home</title>
         <link rel="icon" href="/favicon.ico" />
@@ -15,7 +16,10 @@ export default function Home() {
 
       <section className="flex flex-col justify-center items-center text-center">
         <h1 className="font-bold text-3xl sm:text-4xl">
-          Welcome <span className="text-2xl sm:text-3xl">🖐</span>
+          Welcome{' '}
+          <span className="inline-block text-2xl sm:text-3xl animate-wiggle">
+            🖐
+          </span>
         </h1>
         <p className="text-xs xs:text-sm">
           Learning goes on, one tip at a time
@@ -41,6 +45,8 @@ export default function Home() {
         <h2 className="font-semibold text-2xl xs:text-3xl md:text-4xl">
           Latest Entries
         </h2>
+
+        <Card tag="css" />
       </main>
     </div>
   );
