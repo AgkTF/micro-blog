@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^9.5.5",
+    "@tailwindcss/typography": "^0.2.0",
     "next": "9.5.5",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",

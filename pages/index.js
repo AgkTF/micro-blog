@@ -5,7 +5,7 @@ import Card from '../components/Card/Card';
 
 export default function Home() {
   return (
-    <div className="mx-auto font-work text-text">
+    <div className="mx-auto font-work text-gray-700">
       <Head>
         <title>Learning tidbits | Home</title>
         <link rel="icon" href="/favicon.ico" />

@@ -12,6 +12,25 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
+    typography: (theme) => ({
+      default: {
+        css: {
+          color: theme('colors.gray.800'),
+          code: {
+            color: theme('colors.pink.500'),
+          },
+          a: {
+            color: theme('colors.blue.600'),
+            '&:hover': {
+              color: theme('colors.blue.400'),
+            },
+          },
+          blockquote: {
+            color: theme('colors.gray.800'),
+          },
+        },
+      },
+    }),
     extend: {
       spacing: {
         72: '18rem',
@@ -25,7 +44,6 @@ module.exports = {
         tiny: '0.625rem',
       },
       colors: {
-        text: '#2B2C34',
         css: {
           default: '#3da9fc',
           light: '#CEE9FE',
@@ -58,5 +76,5 @@ module.exports = {
   variants: {
     boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

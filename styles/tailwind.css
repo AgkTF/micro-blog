@@ -10,7 +10,7 @@
 @tailwind base;
 @tailwind components;
 
-/* .cat-btn {
+.cat-btn {
   @apply px-1 font-medium border rounded text-xs;
 }
 
@@ -38,6 +38,6 @@
 
 .git-btn {
   @apply text-git border-git;
-} */
+}
 
 @tailwind utilities;
