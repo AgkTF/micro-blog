@@ -14,7 +14,9 @@
   @apply px-1 font-medium border rounded text-xs;
 }
 
-.cat-btn:hover {
+.cat-btn:hover,
+.cat-btn:focus,
+.cat-btn:active {
   @apply border-opacity-0 text-offWhite;
 }
 

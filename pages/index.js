@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
-import Link from 'next/link';
+import NavLinks from '../components/NavLinks/NavLinks';
 import Card from '../components/Card/Card';
 import { getEntries } from '../lib/entries';
 
@@ -26,20 +26,7 @@ export default function Home({ entries }) {
           Learning goes on, one tip at a time
         </p>
 
-        <div className="mt-4 flex gap-3">
-          <Link href="/javascript">
-            <button className="cat-btn js-btn hover:bg-js">javascript</button>
-          </Link>
-          <Link href="/css">
-            <button className="cat-btn css-btn hover:bg-css">css</button>
-          </Link>
-          <Link href="/html">
-            <button className="cat-btn html-btn hover:bg-html">html</button>
-          </Link>
-          <Link href="/git">
-            <button className="cat-btn git-btn hover:bg-git">git</button>
-          </Link>
-        </div>
+        <NavLinks />
       </section>
 
       <main className="mt-8 flex flex-col justify-center items-center">
