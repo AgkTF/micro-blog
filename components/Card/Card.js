@@ -25,7 +25,7 @@ const Card = ({ date, content, tag, href }) => {
 
   return (
     <div
-      className={`p-2 w-3/4 sm:w-4/6 md:w-88 border border-l-4 border-${tag} flex flex-col shadow hover:shadow-css cursor-pointer`}
+      className={`p-2 w-3/4 sm:w-4/6 md:w-88 border border-l-4 border-${tag} flex flex-col cursor-pointer shadow-${tag}Light hover:shadow-${tag}`}
       onClick={clickHandler}
     >
       <div className={`self-end font-medium text-xs text-${tag}`}>

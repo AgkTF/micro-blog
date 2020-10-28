@@ -71,6 +71,24 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
       },
+      boxShadow: {
+        cssLight:
+          '0 4px 6px -1px rgba(61, 169, 252, 0.2), 0 2px 4px -1px rgba(61, 169, 252, 0.06)',
+        css:
+          '0 4px 6px -1px rgba(61, 169, 252, 0.4), 0 2px 4px -1px rgba(61, 169, 252, 0.06)',
+        htmlLight:
+          '0 4px 6px -1px rgba(228, 77, 38, 0.2), 0 2px 4px -1px rgba(228, 77, 38, 0.06)',
+        html:
+          '0 4px 6px -1px rgba(228, 77, 38, 0.4), 0 2px 4px -1px rgba(228, 77, 38, 0.06)',
+        jsLight:
+          '0 4px 6px -1px rgba(236, 201, 75, 0.2), 0 2px 4px -1px rgba(236, 201, 75, 0.06)',
+        js:
+          '0 4px 6px -1px rgba(236, 201, 75, 0.4), 0 2px 4px -1px rgba(236, 201, 75, 0.06)',
+        gitLight:
+          '0 4px 6px -1px rgba(10, 10, 10, 0.2), 0 2px 4px -1px rgba(10, 10, 10, 0.06)',
+        git:
+          '0 4px 6px -1px rgba(10, 10, 10, 0.4), 0 2px 4px -1px rgba(10, 10, 10, 0.06)',
+      },
     },
   },
   variants: {
