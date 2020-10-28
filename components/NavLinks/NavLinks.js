@@ -6,10 +6,10 @@ const NavLinks = () => {
 
   return (
     <div className="mt-4 flex gap-3">
-      <Link href="/javascript">
+      <Link href="/js">
         <a
           className={`cat-btn js-btn hover:bg-js focus:bg-js active:bg-js ${
-            router.pathname === '/javascript'
+            router.pathname === '/js'
               ? `border-opacity-0 text-offWhite bg-js`
               : ``
           }`}
