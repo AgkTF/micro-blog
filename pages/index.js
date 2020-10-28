@@ -2,8 +2,9 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar/Navbar';
 import Link from 'next/link';
 import Card from '../components/Card/Card';
+import { getEntries } from '../lib/entries';
 
-export default function Home() {
+export default function Home({ entries }) {
   return (
     <div className="mx-auto font-work text-gray-700">
       <Head>
@@ -46,8 +47,27 @@ export default function Home() {
           Latest Entries
         </h2>
 
-        <Card tag="css" />
+        <section className="mt-10 flex flex-col gap-4 items-center justify-center">
+          {entries.map((entry) => (
+            <Card
+              key={entry.date_added}
+              content={entry.content}
+              date={entry.date_added}
+              tag={entry.category}
+            />
+          ))}
+        </section>
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const entries = await getEntries();
+
+  return {
+    props: {
+      entries,
+    },
+  };
 }
