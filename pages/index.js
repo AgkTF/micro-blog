@@ -37,10 +37,11 @@ export default function Home({ entries }) {
         <section className="mt-10 flex flex-col gap-4 items-center justify-center">
           {entries.map((entry) => (
             <Card
-              key={entry.date_added}
-              content={entry.content}
-              date={entry.date_added}
-              tag={entry.category}
+              key={entry[0]}
+              content={entry[1].content}
+              date={entry[1].date_added}
+              tag={entry[1].category}
+              href={`/tip/${entry[0]}`}
             />
           ))}
         </section>
