@@ -1,27 +1,54 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const NavLinks = () => {
+  const router = useRouter();
+
   return (
     <div className="mt-4 flex gap-3">
       <Link href="/javascript">
-        <button className="cat-btn js-btn hover:bg-js focus:bg-js active:bg-js">
+        <a
+          className={`cat-btn js-btn hover:bg-js focus:bg-js active:bg-js ${
+            router.pathname === '/javascript'
+              ? `border-opacity-0 text-offWhite bg-js`
+              : ``
+          }`}
+        >
           javascript
-        </button>
+        </a>
       </Link>
       <Link href="/css">
-        <button className="cat-btn css-btn hover:bg-css focus:bg-css active:bg-css">
+        <a
+          className={`cat-btn css-btn hover:bg-css focus:bg-css active:bg-css ${
+            router.pathname === '/css'
+              ? `border-opacity-0 text-offWhite bg-css`
+              : ``
+          }`}
+        >
           css
-        </button>
+        </a>
       </Link>
       <Link href="/html">
-        <button className="cat-btn html-btn hover:bg-html focus:bg-html active:bg-html">
+        <a
+          className={`cat-btn html-btn hover:bg-html focus:bg-html active:bg-html ${
+            router.pathname === '/html'
+              ? `border-opacity-0 text-offWhite bg-html`
+              : ``
+          }`}
+        >
           html
-        </button>
+        </a>
       </Link>
       <Link href="/git">
-        <button className="cat-btn git-btn hover:bg-git focus:bg-git active:bg-git">
+        <a
+          className={`cat-btn git-btn hover:bg-git focus:bg-git active:bg-git ${
+            router.pathname === '/git'
+              ? `border-opacity-0 text-offWhite bg-git`
+              : ``
+          }`}
+        >
           git
-        </button>
+        </a>
       </Link>
     </div>
   );
