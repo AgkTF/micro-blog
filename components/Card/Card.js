@@ -29,7 +29,7 @@ const Card = ({ date, content, tag }) => {
         </span>
       </div>
 
-      <div className="prose prose-sm">
+      <div className="mt-2 prose prose-sm">
         <ReactMarkdown renderers={renderers} children={content} />
       </div>
 
