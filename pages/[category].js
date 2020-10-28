@@ -19,6 +19,7 @@ export default function CategoryPage({ entries, category }) {
         <NavLinks />
 
         <div className="mt-16 text-center flex flex-col justify-center items-center">
+          {/* //TODO: select which image to show */}
           {/* <img src="/css3-plain.svg" alt="css3 logo" className="w-1/2" /> */}
           <h2
             className={`mt-3 font-semibold text-2xl sm:text-3xl text-${category}`}
