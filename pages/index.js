@@ -6,7 +6,7 @@ import { getEntries } from '../lib/entries';
 
 export default function Home({ entries }) {
   return (
-    <div className="mx-auto font-work text-gray-700">
+    <div className="mx-auto bg-gray-100 font-work text-gray-700">
       <Head>
         <title>Learning tidbits | Home</title>
         <link rel="icon" href="/favicon.ico" />

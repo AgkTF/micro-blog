@@ -6,7 +6,7 @@ import Card from '../components/Card/Card';
 
 export default function CategoryPage({ entries, category }) {
   return (
-    <div className="mx-auto font-work text-gray-700">
+    <div className="mx-auto bg-gray-100 font-work text-gray-700">
       <Head>
         <title>{category} tidbits</title>
       </Head>
@@ -53,6 +53,7 @@ export async function getStaticPaths() {
       { params: { category: 'css' } },
       { params: { category: 'html' } },
       { params: { category: 'git' } },
+      { params: { category: 'vs' } },
     ],
     fallback: true,
   };
@@ -76,6 +77,10 @@ export async function getStaticProps({ params }) {
 
     case 'git':
       entries = await getCategoryEntries('git');
+      break;
+
+    case 'vs':
+      entries = await getCategoryEntries('vs');
       break;
 
     default:

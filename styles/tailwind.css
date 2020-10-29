@@ -42,4 +42,8 @@
   @apply text-git border-git;
 }
 
+.vs-btn {
+  @apply text-vs border-vs;
+}
+
 @tailwind utilities;

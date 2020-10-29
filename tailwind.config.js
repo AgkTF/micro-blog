@@ -36,6 +36,7 @@ module.exports = {
         72: '18rem',
         80: '20rem',
         88: '22rem',
+        136: '34rem',
       },
       fontFamily: {
         work: 'Work Sans',
@@ -60,6 +61,10 @@ module.exports = {
           default: '#0A0A0A',
           light: '#C1C1C1',
         },
+        vs: {
+          default: '#007acc',
+          light: '#BFDDF2',
+        },
         offWhite: '#FFFFFE',
       },
       keyframes: {
@@ -75,19 +80,23 @@ module.exports = {
         cssLight:
           '0 4px 6px -1px rgba(61, 169, 252, 0.2), 0 2px 4px -1px rgba(61, 169, 252, 0.06)',
         css:
-          '0 4px 6px -1px rgba(61, 169, 252, 0.4), 0 2px 4px -1px rgba(61, 169, 252, 0.06)',
+          '6px 8px 6px -1px rgba(61, 169, 252, 0.2), 0 2px 4px -1px rgba(61, 169, 252, 0.06)',
         htmlLight:
           '0 4px 6px -1px rgba(228, 77, 38, 0.2), 0 2px 4px -1px rgba(228, 77, 38, 0.06)',
         html:
-          '0 4px 6px -1px rgba(228, 77, 38, 0.4), 0 2px 4px -1px rgba(228, 77, 38, 0.06)',
+          '6px 8px 6px -1px rgba(228, 77, 38, 0.2), 0 2px 4px -1px rgba(228, 77, 38, 0.06)',
         jsLight:
           '0 4px 6px -1px rgba(236, 201, 75, 0.2), 0 2px 4px -1px rgba(236, 201, 75, 0.06)',
         js:
-          '0 4px 6px -1px rgba(236, 201, 75, 0.4), 0 2px 4px -1px rgba(236, 201, 75, 0.06)',
+          '6px 8px 6px -1px rgba(236, 201, 75, 0.2), 0 2px 4px -1px rgba(236, 201, 75, 0.06)',
         gitLight:
           '0 4px 6px -1px rgba(10, 10, 10, 0.2), 0 2px 4px -1px rgba(10, 10, 10, 0.06)',
         git:
-          '0 4px 6px -1px rgba(10, 10, 10, 0.4), 0 2px 4px -1px rgba(10, 10, 10, 0.06)',
+          '6px 8px 6px -1px rgba(10, 10, 10, 0.2), 0 2px 4px -1px rgba(10, 10, 10, 0.06)',
+        vsLight:
+          '0 4px 6px -1px rgba(0, 122, 204, 0.2), 0 2px 4px -1px rgba(0, 122, 204, 0.06)',
+        vs:
+          '6px 8px 6px -1px rgba(0, 122, 204, 0.2), 0 2px 4px -1px rgba(0, 122, 204, 0.06)',
       },
     },
   },

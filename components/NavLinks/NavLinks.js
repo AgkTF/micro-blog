@@ -50,6 +50,17 @@ const NavLinks = () => {
           git
         </a>
       </Link>
+      <Link href="/vs">
+        <a
+          className={`cat-btn vs-btn hover:bg-vs focus:bg-vs active:bg-vs ${
+            router.pathname === '/vs'
+              ? `border-opacity-0 text-offWhite bg-vs`
+              : ``
+          }`}
+        >
+          vs code
+        </a>
+      </Link>
     </div>
   );
 };

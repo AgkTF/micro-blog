@@ -23,9 +23,22 @@ const Card = ({ date, content, tag, href }) => {
     },
   };
 
+  const tagNameModifier = (tag) => {
+    let updatedTag;
+
+    if (tag === 'js') {
+      updatedTag = 'javascript';
+    } else if (tag === 'vs') {
+      updatedTag = 'vs code';
+    } else {
+      updatedTag = tag;
+    }
+    return updatedTag;
+  };
+
   return (
     <div
-      className={`p-2 w-3/4 sm:w-4/6 md:w-88 border border-l-4 border-${tag} flex flex-col cursor-pointer shadow-${tag}Light hover:shadow-${tag}`}
+      className={`py-2 px-3 w-3/4 xs:w-88 sm:w-136 border-l-4 border-${tag} flex flex-col cursor-pointer transition-all duration-150 ease-in-out bg-offWhite shadow-${tag}Light hover:shadow-${tag}`}
       onClick={clickHandler}
     >
       <div className={`self-end font-medium text-xs text-${tag}`}>
@@ -46,7 +59,7 @@ const Card = ({ date, content, tag, href }) => {
         <div
           className={`px-1 rounded bg-${tag}-light text-${tag} text-xs font-medium`}
         >
-          {tag === 'js' ? 'javascript' : tag}
+          {tagNameModifier(tag)}
         </div>
         <div></div>
       </div>
