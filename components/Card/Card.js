@@ -1,10 +1,19 @@
+import { useCallback, useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { ghcolors } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { useRouter } from 'next/router';
+import TweetBtn from '../ShareBtn/ShareBtn';
 
 const Card = ({ date, content, tag, href }) => {
   const router = useRouter();
+  const [contentText, setContentText] = useState('');
+
+  const contentRef = useCallback((node) => {
+    if (node !== null) {
+      setContentText(node.innerText);
+    }
+  }, []);
 
   const clickHandler = (e) => {
     e.preventDefault();
@@ -36,6 +45,10 @@ const Card = ({ date, content, tag, href }) => {
     return updatedTag;
   };
 
+  const renderedContent = (
+    <ReactMarkdown renderers={renderers} children={content} />
+  );
+
   return (
     <div
       className={`py-2 px-3 w-3/4 xs:w-88 sm:w-136 border-l-4 border-${tag} flex flex-col cursor-pointer transition-all duration-150 ease-in-out bg-offWhite shadow-${tag}Light hover:shadow-${tag}`}
@@ -51,8 +64,8 @@ const Card = ({ date, content, tag, href }) => {
         </span>
       </div>
 
-      <div className="mt-2 prose prose-sm">
-        <ReactMarkdown renderers={renderers} children={content} />
+      <div className="mt-2 prose prose-sm" ref={contentRef}>
+        {renderedContent}
       </div>
 
       <div className="mt-4 flex justify-between items-center">
@@ -61,7 +74,7 @@ const Card = ({ date, content, tag, href }) => {
         >
           {tagNameModifier(tag)}
         </div>
-        <div></div>
+        <TweetBtn content={contentText} tip_url={href} />
       </div>
     </div>
   );

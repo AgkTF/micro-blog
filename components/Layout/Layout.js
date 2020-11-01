@@ -96,7 +96,7 @@ export default function Layout({ children, home, category, date }) {
   }
 
   return (
-    <div className="mx-auto bg-gray-100 font-work text-gray-700">
+    <div className="mx-auto bg-gray-100 font-work text-gray-700 min-h-screen">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
