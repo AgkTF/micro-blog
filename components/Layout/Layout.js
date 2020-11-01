@@ -3,8 +3,56 @@ import Navbar from '../Navbar/Navbar';
 import NavLinks from '../NavLinks/NavLinks';
 
 export default function Layout({ children, home, category, date }) {
-  let headerContent;
+  const imageSelector = (category) => {
+    let imgDetails = {
+      src: '',
+      alt: '',
+    };
 
+    switch (category) {
+      case 'js':
+        imgDetails = {
+          src: '/javascript-plain.svg',
+          alt: 'javascript logo',
+        };
+        break;
+
+      case 'css':
+        imgDetails = {
+          src: '/css3-plain.svg',
+          alt: 'CSS3 logo',
+        };
+        break;
+
+      case 'html':
+        imgDetails = {
+          src: '/html5-plain.svg',
+          alt: 'HTML5 logo',
+        };
+        break;
+
+      case 'git':
+        imgDetails = {
+          src: '/git-plain-wordmark.svg',
+          alt: 'GIT logo',
+        };
+        break;
+
+      case 'vs':
+        imgDetails = {
+          src: '/vs-code.svg',
+          alt: 'VS Code logo',
+        };
+        break;
+
+      default:
+        break;
+    }
+
+    return <img src={imgDetails.src} alt={imgDetails.alt} className="w-1/2" />;
+  };
+
+  let headerContent;
   if (home) {
     headerContent = (
       <>
@@ -25,8 +73,7 @@ export default function Layout({ children, home, category, date }) {
       <>
         <NavLinks />
         <div className="mt-16 text-center flex flex-col justify-center items-center">
-          {/* //TODO: select which image to show */}
-          {/* <img src="/css3-plain.svg" alt="css3 logo" className="w-1/2" /> */}
+          {imageSelector(category)}
           <h2
             className={`mt-3 font-semibold text-2xl sm:text-3xl text-${category}`}
           >
