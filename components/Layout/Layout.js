@@ -88,8 +88,10 @@ export default function Layout({ children, home, category, date }) {
       <>
         <NavLinks />
         <div className="mt-16 text-center flex flex-col justify-center items-center">
-          <span className="font-medium text-base md:text-lg">Tips of</span>
-          <h2 className="mt-3 font-semibold text-2xl sm:text-3xl">{date}</h2>
+          <span className="font-medium text-base md:text-lg place-self-start">
+            Tips of
+          </span>
+          <h2 className="font-semibold text-2xl sm:text-3xl">{date}</h2>
         </div>
       </>
     );
