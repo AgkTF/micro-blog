@@ -58,8 +58,10 @@ const Card = ({ date, content, tag, href }) => {
 
   return (
     <div
-      className={`pt-2 pb-3 px-3 w-3/4 xs:w-88 sm:w-136 border-l-4 border-${tag} flex flex-col cursor-pointer transition-all duration-150 ease-in-out bg-offWhite shadow-${tag}Light hover:shadow-${tag}`}
-      onClick={clickHandler}
+      className={`pt-2 pb-3 px-3 w-3/4 xs:w-88 sm:w-136 border-l-4 border-${tag} flex flex-col transition-all duration-150 ease-in-out bg-offWhite shadow-${tag}Light hover:shadow-${tag} ${
+        router.pathname.match(/\/tip\/*/g) ? '' : 'cursor-pointer'
+      }`}
+      onClick={router.pathname.match(/\/tip\/*/g) ? null : clickHandler}
     >
       <Link href={`/day/${date}`}>
         <div

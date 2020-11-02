@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import Error from 'next/error';
 import { isEmpty } from 'lodash';
 
-export default function TipPage({ tipDetails }) {
+export default function TipPage({ tipDetails, id }) {
   const { isFallback } = useRouter();
 
   if (!isFallback && isEmpty(tipDetails)) {
@@ -25,10 +25,11 @@ export default function TipPage({ tipDetails }) {
         <p className="text-green-600 font-semibold text-center">Loading...</p>
       ) : (
         <Card
-          key={tipDetails.date_added}
+          key={id}
           content={tipDetails.content}
           date={tipDetails.date_added}
           tag={tipDetails.category}
+          href={`/tip/${id}`}
         />
       )}
     </Layout>
@@ -50,7 +51,7 @@ export async function getStaticProps({ params }) {
 
     //TODO: test if the tip does not exist
     return {
-      props: { tipDetails },
+      props: { tipDetails, id },
     };
   } catch (error) {
     console.error(error);
