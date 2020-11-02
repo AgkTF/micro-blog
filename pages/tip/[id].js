@@ -13,8 +13,6 @@ export default function TipPage({ tipDetails, id }) {
     return <Error statusCode={404} title="This tip could not be found" />;
   }
 
-  //FIXME: add the id to the props object
-  // pass href prop to teh card
   return (
     <Layout>
       <Head>

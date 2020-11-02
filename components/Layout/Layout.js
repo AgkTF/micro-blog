@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../Navbar/Navbar';
 import NavLinks from '../NavLinks/NavLinks';
+import Footer from '../Footer/Footer';
 
 export default function Layout({ children, home, category, date }) {
   const imageSelector = (category) => {
@@ -80,7 +81,7 @@ export default function Layout({ children, home, category, date }) {
             <span className="underline uppercase">{category}</span> Tidbits
           </h2>
         </div>
-        <hr className={`mt-3 bg-${category}-light h-px w-full`} />
+        <hr className={`mt-8 bg-${category}-light h-px w-full`} />
       </>
     );
   } else if (date) {
@@ -117,9 +118,13 @@ export default function Layout({ children, home, category, date }) {
         </section>
       </header>
 
-      <main className="mt-10 flex flex-col gap-4 items-center justify-center">
+      <main className="mt-8 flex flex-col gap-4 items-center justify-center">
         {children}
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -11,7 +11,7 @@
 @tailwind components;
 
 .cat-btn {
-  @apply px-1 font-medium border rounded text-xs;
+  @apply px-1 font-medium border rounded text-xs flex items-center;
 }
 
 .cat-btn:hover,

@@ -7,9 +7,9 @@ const NavLinks = () => {
   return (
     <div className="mt-4 flex gap-3">
       <Link href="/">
-        <a className="hover:text-indigo-500">
+        <a className="px-1 cat-btn border border-indigo-500  hover:bg-gray-300">
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5 text-indigo-500 hover:text-indigo-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
