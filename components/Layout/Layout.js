@@ -113,7 +113,7 @@ export default function Layout({ children, home, category, date }) {
       <header>
         <Navbar />
 
-        <section className="flex flex-col justify-center items-center text-center">
+        <section className="mt-2 flex flex-col justify-center items-center text-center">
           {headerContent}
         </section>
       </header>

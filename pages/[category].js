@@ -69,5 +69,6 @@ export async function getStaticProps({ params }) {
       entries,
       category: params.category,
     },
+    revalidate: 1,
   };
 }

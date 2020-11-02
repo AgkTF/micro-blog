@@ -56,6 +56,7 @@ export async function getStaticProps({ params }) {
 
     return {
       props: { tipsOfDay, date },
+      revalidate: 1,
     };
   } catch (error) {
     console.error(error);
