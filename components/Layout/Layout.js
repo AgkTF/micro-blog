@@ -4,6 +4,8 @@ import NavLinks from '../NavLinks/NavLinks';
 import Footer from '../Footer/Footer';
 
 export default function Layout({ children, home, category, date }) {
+  const heightStyle = { minHeight: `calc(100vh - 56px)` };
+
   const imageSelector = (category) => {
     let imgDetails = {
       src: '',
@@ -99,32 +101,37 @@ export default function Layout({ children, home, category, date }) {
   }
 
   return (
-    <div className="mx-auto bg-gray-100 font-work text-gray-700 min-h-screen">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="A collection of useful tidbits of everything programming create by Agk."
-        />
-        <meta name="og:title" content="Learning tidbits" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+    <>
+      <div
+        className="pb-12 mx-auto bg-gray-100 font-work text-gray-700"
+        style={heightStyle}
+      >
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="description"
+            content="A collection of useful tidbits of everything programming create by Agk."
+          />
+          <meta name="og:title" content="Learning tidbits" />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Head>
 
-      <header>
-        <Navbar />
+        <header>
+          <Navbar />
 
-        <section className="mt-2 flex flex-col justify-center items-center text-center">
-          {headerContent}
-        </section>
-      </header>
+          <section className="mt-2 flex flex-col justify-center items-center text-center">
+            {headerContent}
+          </section>
+        </header>
 
-      <main className="mt-8 flex flex-col gap-4 items-center justify-center">
-        {children}
-      </main>
+        <main className="mt-8 flex flex-col gap-4 items-center justify-center">
+          {children}
+        </main>
+      </div>
 
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 }

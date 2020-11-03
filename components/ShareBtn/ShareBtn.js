@@ -1,6 +1,6 @@
 const ShareBtn = ({ content, tip_url }) => {
   const tweetText = `${content}  
-  Check the original tip at ${tip_url} by @agkTF`;
+  Check the original tip at https://micro-blog.agktf.vercel.app${tip_url} by @agkTF`;
 
   const clickHandler = (e) => {
     e.stopPropagation();

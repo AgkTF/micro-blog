@@ -3,7 +3,15 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ['./components/**/*.{js}', './pages/**/*.js'],
+  purge: {
+    content: [
+      './components/**/*.{js,ts,jsx,tsx}',
+      './pages/**/*.{js,ts,jsx,tsx}',
+    ],
+    options: {
+      whitelistPatterns: [/css|js|html|git|vs/],
+    },
+  },
   theme: {
     screens: {
       xs: '414px',

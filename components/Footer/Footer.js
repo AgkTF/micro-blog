@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="py-1 mt-12 w-full bg-gray-300 flex items-center justify-center">
+    <div className="py-1 w-full bg-gray-300 flex items-center justify-center">
       <p className="mr-1 text-sm font-semibold">Created by </p>
       <a href="https://agktf.com" target="_blank" rel="noopener noreferrer">
         <svg
