@@ -32,37 +32,12 @@ export async function getStaticPaths() {
       { params: { category: 'git' } },
       { params: { category: 'vs' } },
     ],
-    fallback: true,
+    fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
-  let entries;
-
-  switch (params.category) {
-    case 'js':
-      entries = await getCategoryEntries('js');
-      break;
-
-    case 'css':
-      entries = await getCategoryEntries('css');
-      break;
-
-    case 'html':
-      entries = await getCategoryEntries('html');
-      break;
-
-    case 'git':
-      entries = await getCategoryEntries('git');
-      break;
-
-    case 'vs':
-      entries = await getCategoryEntries('vs');
-      break;
-
-    default:
-      break;
-  }
+  const entries = await getCategoryEntries(params.category);
 
   return {
     props: {
